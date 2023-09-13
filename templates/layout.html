@@ -1,28 +1,24 @@
+{% from "macros/navigation.html" import render_navigation with context %}
+
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
 <title>{% block title %}Welcome{% endblock %} — CoderLama</title>
 <body>
   <header>
-    <h1>CoderLama</h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Welcome</a></li>
-        {% for href, title in [
-          ['/projects', 'Projects'],
-          ['/about', 'About']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="wrapper">
+      <h1><a href="/">CoderLama</a></h1>
+      {{ render_navigation('header') }}
+    </div>
   </header>
   <div class="page">
-    {% block body %}{% endblock %}
+    <div class="wrapper">
+      {% block body %}{% endblock %}
+    </div>
   </div>
   <footer>
-    &copy; Copyright 2023 by Mirat.
+    <div class="wrapper">
+      {{ render_navigation('footer') }}
+    </div>
   </footer>
 </body>

@@ -1,0 +1,11 @@
+{% macro render_navigation(position) %}
+    <nav>
+      <ul class="nav navbar-nav">
+        {% for child in site.get('/').children.filter(F.position == position) %}
+          <li{% if this.is_child_of(child) %} class="active"{% endif %}>
+            <a href="{{ child.path }}">{{ child.link_text or child.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endmacro %}

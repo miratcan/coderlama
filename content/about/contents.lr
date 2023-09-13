@@ -1,4 +1,8 @@
-title: About this Website
+_model: root-page
+---
+title: About Us
+---
+position: footer
 ---
 body:
 

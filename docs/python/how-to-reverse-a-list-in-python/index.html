@@ -2,8 +2,8 @@
 
 <!doctype html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../static/style.css">
-<title>About Us — CoderLama</title>
+<link rel="stylesheet" href="../../static/style.css">
+<title>How to reverse a list in Python? — CoderLama</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" integrity="sha512-rdhY3cbXURo13l/WU9VlaRyaIYeJ/KBakckXIvJNAQde8DgpOmE+eZf7ha4vdqVjTtwQt69bD2wH2LXob/LB7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,7 +16,7 @@
     <nav>
       <ul class="nav navbar-nav">
         
-          <li>
+          <li class="active">
             <a href="/python">Python</a>
           </li>
         
@@ -32,9 +32,32 @@
   <div class="page">
     <div class="wrapper">
       
-  <h2>About Us</h2>
-  <p>This is a website that was made with the Lektor quickstart.</p>
-<p>And it does not contain a lot of information.</p>
+  <h2>How to reverse a list in Python?</h2>
+  <div>
+  <h3>Method 1: Reversing list in place with reverse method.</h3>
+  <p>Python has built in reverse method that reverses the list in place.</p>
+<pre><code>&gt;&gt;&gt; a = [1, 2, 3, 4]
+&gt;&gt;&gt; a.reverse()
+&gt;&gt;&gt; print(a)
+[4, 3, 2, 1]
+</code></pre>
+
+</div>
+
+
+<div>
+  <h3>Method 2: Generating reversed version of list by using slicing method</h3>
+  <p>Python, list slicing is a common practice and it is the most used technique for programmers to solve efficient problems. It's syntax is this:</p>
+<pre><code>List[start index, end index, step]
+</code></pre>
+<p>If you use this method with -1 step value it will generate a list from end index to start index.</p>
+<pre><code>&gt;&gt;&gt; a = [1, 2, 3, 4]
+&gt;&gt;&gt;. a[::-1]
+[4, 3, 2, 1]
+</code></pre>
+<p>The main difference between this and reverse method is this is generating a new list instead of reversing it in place.</p>
+
+</div>
 
 
     </div>
@@ -53,7 +76,7 @@
             <a href="/privacy-policy">Privacy Policy</a>
           </li>
         
-          <li class="active">
+          <li>
             <a href="/about">About Us</a>
           </li>
         

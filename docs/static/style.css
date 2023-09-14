@@ -5,34 +5,41 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 16px;
+    line-height: 20px;
 }
 a {
-    color: #2a99b6;
+  color: #2a99b6;
 }
 a:hover {
-    color: #33bbdf;
+  color: #33bbdf;
+}
+a.brand {
+  font-weight: bold;
+  text-decoration: none;
 }
 header, footer, div.page {
-    padding: 20px 30px;
+  padding: 20px 30px;
 }
 header, footer{
   background: #2C2C2C;
 }
 header h1 {
-    color: #169bbd;
-    margin: 0;
-    font-weight: normal;
-    font-size: 42px;
+  color: #169bbd;
+  margin: 0;
+  font-weight: normal;
+  font-size: 42px;
+  display: inline-block;
 }
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 nav ul li {
-    display: inline;
-    margin: 0 8px 0 0;
-    padding: 0;
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0;
 }
 .page {
   flex-grow: 1;
@@ -43,3 +50,7 @@ nav ul li {
   margin: 0 auto;
 }
 
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,33 @@
+_model: how-to-page
+---
+title: How to reverse a list in Python?
+---
+body:
+
+#### how-to-method ####
+title: Method 1: Reversing list in place with reverse method.
+----
+body:
+
+Python has built in reverse method that reverses the list in place.
+
+    >>> a = [1, 2, 3, 4]
+    >>> a.reverse()
+    >>> print(a)
+    [4, 3, 2, 1]
+#### how-to-method ####
+title: Method 2: Generating reversed version of list by using slicing method
+----
+body:
+
+Python, list slicing is a common practice and it is the most used technique for programmers to solve efficient problems. It's syntax is this:
+
+    List[start index, end index, step]
+
+If you use this method with -1 step value it will generate a list from end index to start index.
+
+    >>> a = [1, 2, 3, 4]
+    >>>. a[::-1]
+    [4, 3, 2, 1]
+
+The main difference between this and reverse method is this is generating a new list instead of reversing it in place.

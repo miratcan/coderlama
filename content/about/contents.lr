@@ -1,11 +1,5 @@
-_model: root-page
+_model: page
 ---
-title: About Us
+title: About
 ---
-position: footer
----
-body:
-
-This is a website that was made with the Lektor quickstart.
-
-And it does not contain a lot of information.
+body: This website provides information about physical and digital products for software developers.

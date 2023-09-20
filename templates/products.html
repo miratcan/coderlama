@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+{{ this.body }}
+<ul>
+    {% for child in this.children %}
+        <li><a href="{{ child.path }}">{{ child.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

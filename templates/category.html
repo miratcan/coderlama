@@ -1,11 +1,15 @@
 {% extends "layout.html" %}
-{% block title %}{{ this.title }}{% endblock %}
+{% block title %}{{ this.name }}{% endblock %}
+
 {% block body %}
-  <h2>{{ this.title }}</h2>
-  {{ this.body }}
-  <ul>
-  {% for child in this.children %}
-    <li><a href="{{ child.path }}">{{ child.title }}</a></li>
-  {% endfor %}
-  </ul>
+<h1>{{ this.name }}</h1>
+{{ this.body }}
+<div class="products">
+    {% for product in this.children %}
+    {% include "components/product-item.html" %}
+    {% include "components/product-item.html" %}
+    {% include "components/product-item.html" %}
+    {% include "components/product-item.html" %}
+    {% endfor %}
+</div>
 {% endblock %}

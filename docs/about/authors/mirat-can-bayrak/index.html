@@ -1,19 +1,28 @@
-{% from "macros/navigation.html" import render_navigation with context %}
+
 
 <!doctype html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — CoderLama</title>
+<link rel="stylesheet" href="../../../static/style.css">
+<title> — CoderLama</title>
 <body>
   <header>
     <div class="wrapper">
       <a class='brand' href='/'>CoderLama</a>
-      {{ render_navigation('header') }}
+      
+    <nav>
+      <ul class="nav navbar-nav">
+        
+      </ul>
+    </nav>
+  
     </div>
   </header>
   <div class="page">
     <div class="wrapper">
-      {% block body %}{% endblock %}
+      
+  <h2></h2>
+  
+
     </div>
   </div>
   <footer>

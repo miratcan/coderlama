@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<article class="product">
+  <div class="image">
+    {% for attachment in this.attachments %}
+      <img src="{{attachment.path}}" />
+    {% endfor %}
+  </div>
+  <div class="details">
+    <h1>{{ this.title }}</h1>
+    <p>{{ this.description }}</p>
+    <p>{{ this.price }}</p>
+    <a class="button" href="{{ this.link }}">Check It Out</a>
+  </div>
+</article>
+{% endblock %}

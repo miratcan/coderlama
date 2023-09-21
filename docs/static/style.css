@@ -10,6 +10,7 @@ body {
 }
 a {
   color: #2a99b6;
+  text-decoration: none;
 }
 a:hover {
   color: #33bbdf;
@@ -60,7 +61,7 @@ header .wrapper {
 }
 .products {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 .product-item {
@@ -94,6 +95,14 @@ header .wrapper {
   align-self: flex-start;
 }
 .button {
-  background: yellow;
-  padding: 10px;
+  text-align: center;
+  display: block;
+  background: #faab37;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border: 1px outset #ea9b27;
+}
+.button:hover {
+  color: inherit;
 }

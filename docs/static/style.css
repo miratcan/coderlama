@@ -15,10 +15,6 @@ a {
 a:hover {
   color: #33bbdf;
 }
-a.brand {
-  font-weight: bold;
-  text-decoration: none;
-}
 h1, h2, h3, h4, h5 {
   margin-top: 0;
 }
@@ -27,6 +23,7 @@ header, footer, div.page {
 }
 header, footer{
   background: #2C2C2C;
+  color: #999;
 }
 h1 {
   font-size: 1.4em;
@@ -54,10 +51,20 @@ nav ul li {
   max-width: 800px;
   margin: 0 auto;
 }
-
 header .wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+header .wrapper a.brand {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+header .wrapper span {
+  font-size: 12px;
+  line-height: 12px;
 }
 .products {
   display: grid;

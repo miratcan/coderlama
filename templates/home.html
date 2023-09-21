@@ -1,9 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
 <h1>Hello</h1>
-
 <div class="products">
 {% for child in this.children recursive %}
   {% if child._model == 'product' %}
@@ -14,5 +12,4 @@
   {{ loop(child.children) }}
 {% endfor %}
 </div>
-
 {% endblock %}

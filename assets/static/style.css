@@ -25,6 +25,10 @@ header, footer{
   background: #2C2C2C;
   color: #999;
 }
+.page {
+  background: url(/lama.png) bottom left no-repeat;
+  background-size: 300px;
+}
 h1 {
   font-size: 1.4em;
   line-height: 1.4em;

@@ -4,9 +4,10 @@
 {% block body %}
 <h1>{{ this.name }}</h1>
 {{ this.body }}
-<div class="products">
+<div id="products">
     {% for product in this.children %}
     {% include "components/product-item.html" %}
     {% endfor %}
 </div>
+{% include "components/masonry-script.html" %}
 {% endblock %}

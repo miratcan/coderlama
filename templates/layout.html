@@ -3,6 +3,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}Welcome{% endblock %} — CoderLama</title>
 <body>
   <header>
@@ -33,5 +34,6 @@
         <li><a>Instagram</a></li>
       </ul>
     </div>
+    {% include "components/masonry-script.html" %}
   </footer>
-</body>
+  </body>

@@ -3,6 +3,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="static/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome — CoderLama</title>
 <body>
   <header>
@@ -15,7 +16,7 @@
     <div class="wrapper">
       
 <h1>Hello</h1>
-<div class="products">
+<div id="products">
 
   
   
@@ -24,12 +25,14 @@
   
     
       <div class="product-item">
+  <div class='content'>
     <h2><a href="/products/pomodoro-timers/hexagon-rotating-productivity-timer-with-clock">Hexagon Rotating Productivity Timer with Clock</a></h2>
     <img src="/products/pomodoro-timers/hexagon-rotating-productivity-timer-with-clock/2.jpg" />
     <p>Improve your productivity by using this well priced digital pomodoro timer.</p>
     
     <p><a href="/products/pomodoro-timers">Pomodoro Timers</a></p>
     
+  </div>
 </div>
     
   
@@ -47,12 +50,14 @@
   
     
       <div class="product-item">
+  <div class='content'>
     <h2><a href="/products/laptops/lenovo-legion-9i-water-cooled-laptop">Lenovo Legion 9i Water Cooled Laptop</a></h2>
     <img src="/products/laptops/lenovo-legion-9i-water-cooled-laptop/4.jpg" />
     <p>Lenovo’s Legion 9i water cooled laptop will handle your marathon gaming sessions without breaking a sweat. Apart from 3 fans, this 16″ gaming laptop with a 3.2K mini LED display and 165 Hz refresh rate comes with a game-changing self-contained cooling system.</p>
     
     <p><a href="/products/laptops">Laptops</a></p>
     
+  </div>
 </div>
     
   
@@ -64,12 +69,14 @@
   
     
       <div class="product-item">
+  <div class='content'>
     <h2><a href="/products/laptop-stands/wheelmate-steering-wheel-tray-for-laptop">Wheelmate: Steering Wheel Tray for Laptop</a></h2>
     <img src="/products/laptop-stands/wheelmate-steering-wheel-tray-for-laptop/1.jpeg" />
     <p>Are you someone who enjoys writing code during a traffic jam? This product is for you.</p>
     
     <p><a href="/products/laptop-stands">Laptop Stands</a></p>
     
+  </div>
 </div>
     
   
@@ -78,12 +85,14 @@
   
     
       <div class="product-item">
+  <div class='content'>
     <h2><a href="/products/laptop-stands/wooden-laptop-stand-holder-and-organizer">Wooden Laptop Stand, Holder and Organizer</a></h2>
     <img src="/products/laptop-stands/wooden-laptop-stand-holder-and-organizer/2.jpg" />
     <p>With this multi-purpose stand, you can keep your laptop cool and reduce clutter on your desk.</p>
     
     <p><a href="/products/laptop-stands">Laptop Stands</a></p>
     
+  </div>
 </div>
     
   
@@ -145,5 +154,21 @@
         <li><a>Instagram</a></li>
       </ul>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+<script>
+  const grid = document.getElementsByClassName("products")[0];
+  var macy = Macy({
+      container: '#products',
+      trueOrder: false,
+      waitForImages: false,
+      margin: 24,
+      columns: 3,
+      breakAt: {
+          520: 2,
+          400: 1
+      }
+  });
+</script>
+
   </footer>
-</body>
+  </body>

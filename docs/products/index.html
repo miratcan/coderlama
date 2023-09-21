@@ -3,6 +3,7 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="../static/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> — CoderLama</title>
 <body>
   <header>
@@ -65,5 +66,21 @@
         <li><a>Instagram</a></li>
       </ul>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+<script>
+  const grid = document.getElementsByClassName("products")[0];
+  var macy = Macy({
+      container: '#products',
+      trueOrder: false,
+      waitForImages: false,
+      margin: 24,
+      columns: 3,
+      breakAt: {
+          520: 2,
+          400: 1
+      }
+  });
+</script>
+
   </footer>
-</body>
+  </body>

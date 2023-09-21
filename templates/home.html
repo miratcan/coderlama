@@ -2,7 +2,7 @@
 
 {% block body %}
 <h1>Hello</h1>
-<div class="products">
+<div id="products">
 {% for child in this.children recursive %}
   {% if child._model == 'product' %}
     {% with product=child, show_category=true %}

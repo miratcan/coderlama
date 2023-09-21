@@ -1,8 +1,10 @@
 <div class="product-item">
+  <div class='content'>
     <h2><a href="{{ product.path }}">{{ product.title }}</a></h2>
     <img src="{{ product.attachments.first().path }}" />
     <p>{{ product.description }}</p>
     {% if show_category %}
     <p><a href="{{ product.parent.path }}">{{ product.parent.name }}</a></p>
     {% endif %}
+  </div>
 </div>

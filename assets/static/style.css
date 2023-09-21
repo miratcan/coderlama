@@ -70,13 +70,24 @@ header .wrapper span {
   font-size: 12px;
   line-height: 12px;
 }
+/*
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
+*/
+#products {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-auto-rows: 200px;
+
+}
+
 .product-item {
 }
+
 .product-item h2 {
   color: #606060;
   font-size: 14px;

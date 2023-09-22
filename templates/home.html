@@ -1,7 +1,14 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1>Hello</h1>
+{% if this.title or this.body %}
+  <div id="page-info">
+  {% if this.title %}
+    <h1>{{ this.title }}</h1>
+  {% endif %}
+  {{ this.body }}
+  </div>
+{% endif %}
 <div id="products">
 {% for child in this.children recursive %}
   {% if child._model == 'product' %}

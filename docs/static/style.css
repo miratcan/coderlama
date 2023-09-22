@@ -29,6 +29,14 @@ header, footer{
   background: url(/lama.png) bottom left no-repeat;
   background-size: 300px;
 }
+#page-info {
+  background: #eef;
+  padding: 20px;
+  margin: 0 0 30px 0;
+}
+#page-info *:last-child {
+  margin-bottom: 0;
+}
 h1 {
   font-size: 1.4em;
   line-height: 1.4em;
@@ -95,7 +103,7 @@ header .wrapper span {
   margin: 0 0 5px 0;
 }
 .product-item img {
-  width: 100%;
+  max-width: 100%;
 }
 .product-item p {
   margin: 0;

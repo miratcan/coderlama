@@ -2,8 +2,14 @@
 {% block title %}{{ this.name }}{% endblock %}
 
 {% block body %}
-<h1>{{ this.name }}</h1>
-{{ this.body }}
+
+{% if this.name or this.body %}
+  <div id="page-info">
+    <h1>{{ this.name }}</h1>
+    {{ this.body }}
+  </div>
+{% endif %}
+
 <div id="products">
     {% for product in this.children %}
     {% include "components/product-item.html" %}

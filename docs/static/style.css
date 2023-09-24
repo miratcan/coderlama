@@ -72,6 +72,16 @@ header .wrapper {
   align-items: flex-end;
   gap: 10px;
 }
+#follow-buttons {
+  flex-grow: 1;
+  text-align: right;
+}
+#follow-buttons .twitter {
+ background: #1D9BF0;
+ color: white;
+ padding: 5px 10px;
+ border-radius: 10px;
+}
 @media only screen and (max-width: 415px) {
   header .wrapper {
     flex-direction: column;

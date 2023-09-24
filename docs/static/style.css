@@ -37,6 +37,10 @@ header, footer{
 #page-info *:last-child {
   margin-bottom: 0;
 }
+#page-info *:first-child {
+  margin-top: 0;
+}
+
 h1 {
   font-size: 1.4em;
   line-height: 1.4em;
@@ -68,6 +72,25 @@ header .wrapper {
   align-items: flex-end;
   gap: 10px;
 }
+@media only screen and (max-width: 415px) {
+  header .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .wrapper {
+    flex-direction: column;
+  }
+  .product {
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  header, footer, div.page {
+    padding: 10px;
+  }
+} 
+
 header .wrapper a.brand {
   font-size: 18px;
   line-height: 18px;
@@ -113,11 +136,12 @@ header .wrapper span {
 }
 .product {
   display: flex;
-  flex-direction: col;
+  flex-flow: col;
   gap: 20px;
 }
 .product img {
   max-width: 433px;
+  max-width: 100%;
 }
 .product .details {
   position: sticky;

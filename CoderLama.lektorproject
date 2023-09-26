@@ -11,3 +11,4 @@ target = ghpages://miratcan/coderlama.github.io
 lektor-tags = 0.5.1
 lektor-minify = 1.2
 lektor-atom = 0.4.0
+lektor-slugify = 0.4

@@ -1,17 +1,18 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-<article class="product">
-  <div class="image">
+<article id="product">
+  <div id="images">
     {% for attachment in this.attachments %}
       <img src="{{attachment.path}}" />
     {% endfor %}
   </div>
-  <div class="details">
-    <h1>{{ this.title }}</h1>
-    <p>{{ this.description }}</p>
-    <p>{{ this.price }}$</p>
+  <h1 id="title">{{ this.title }}</h1>
+  <p id="description">{{ this.description }}</p>
+  <p id="price">{{ this.price }}$</p>
+  <p id="link">
     <a rel="nofollow" class="button" href="{{ this.link }}?tag=coderlam-20">Check It Out</a>
-  </div>
+  </p>
+</div>
 </article>
 {% endblock %}

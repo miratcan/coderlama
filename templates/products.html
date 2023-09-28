@@ -4,7 +4,7 @@
 {{ this.body }}
 <ul>
     {% for child in this.children %}
-        <li><a href="{{ child.path }}">{{ child.name }}</a></li>
+        <li><a href="{{ child.path }}/">{{ child.name }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

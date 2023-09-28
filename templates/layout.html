@@ -27,7 +27,7 @@
       </ul>
       <ul>
         {% for category in site.query('/products') %} 
-        <li><a href="{{ category.path }}">{{ category.name }}</a></li>
+        <li><a href="{{ category.path }}/">{{ category.name }}</a></li>
         {% endfor %}
       </ul>
       <ul>

@@ -59,7 +59,10 @@ nav ul li {
 .page {
   flex-grow: 1;
 }
-
+.page.narrow .wrapper{
+  max-width: 800px;
+  margin: 0 auto;
+}
 header .wrapper {
   display: flex;
   align-items: flex-end;

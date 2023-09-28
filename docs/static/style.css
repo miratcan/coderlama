@@ -29,6 +29,7 @@ header, footer{
   background: #eef;
   padding: 20px;
   margin: 0 0 30px 0;
+  border-radius: 10px;
 }
 #page-info *:last-child {
   margin-bottom: 0;
@@ -59,10 +60,6 @@ nav ul li {
   flex-grow: 1;
 }
 
-.wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-}
 header .wrapper {
   display: flex;
   align-items: flex-end;

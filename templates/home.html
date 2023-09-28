@@ -1,22 +1,26 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{% if this.title or this.body %}
-  <div id="page-info">
-  {% if this.title %}
-    <h1>{{ this.title }}</h1>
+  {% if this.title or this.body %}
+    <div id="page-info">
+      {% if this.title %}
+        <h1>{{ this.title }}</h1>
+      {% endif %}
+      {{ this.body }}
+    </div>
   {% endif %}
-  {{ this.body }}
-  </div>
-{% endif %}
-<div id="products">
-{% for child in this.children recursive %}
-  {% if child._model == 'product' %}
-    {% with product=child, show_category=true %}
-      {% include "components/product-item.html" %}
+  {% set products = [] %}
+  {% for child in this.children recursive %}
+    {% if child._model == 'product' %}
+      {{products.append(child)|default("", True)}}
+    {% endif %}
+    {{ loop(child.children) }}
+  {% endfor %}
+  <div id="products">
+    {% with show_category=true %}
+      {% for product in products|sort(attribute='pub_date', reverse=True) %}
+        {% include "components/product-item.html" %}
+      {% endfor %}
     {% endwith %}
-  {% endif %}
-  {{ loop(child.children) }}
-{% endfor %}
-</div>
+  </div>
 {% endblock %}

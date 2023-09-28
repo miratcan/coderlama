@@ -4,7 +4,7 @@
 <article id="product">
   <div id="images">
     {% for attachment in this.attachments %}
-      <img src="{{attachment.path}}" />
+    <img alt="{{ this.title }}" src="{{attachment.path}}" />
     {% endfor %}
   </div>
   <h1 id="title">{{ this.title }}</h1>

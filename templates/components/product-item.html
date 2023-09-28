@@ -4,7 +4,7 @@
     <img src="{{ product.attachments.first().path }}" />
     <p>{{ product.description }}</p>
     {% if show_category %}
-    <p><a href="{{ product.parent.path }}">{{ product.parent.name }}</a></p>
+    <p><a href="{{ product.parent.path }}/">{{ product.parent.name }}</a></p>
     {% endif %}
   </div>
 </div>

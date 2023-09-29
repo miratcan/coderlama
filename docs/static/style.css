@@ -59,7 +59,7 @@ nav ul li {
 .page {
   flex-grow: 1;
 }
-.page.narrow .wrapper{
+.wrapper.narrow {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -92,7 +92,7 @@ header .wrapper span {
 #products {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));assets
   grid-auto-rows: 200px;
 
 }
@@ -131,6 +131,32 @@ header .wrapper span {
 
 #product #images img  { max-width: 100%; }
 
+
+.product {
+  padding: 10px;
+  margin: 0 0 20px 0;
+  background: lightgrey;
+  border: 1px dashed gray;
+  display: grid;
+  grid-template-columns: minmax(100px, 300px) 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "image title title"
+    "image desc desc"
+    "image price action";
+}
+
+.product .image  { grid-area: image; margin-right: 10px; }
+.product .title  { grid-area: title; }
+.product .desc   { grid-area: desc; }
+.product .price  { grid-area: price; }
+.product .action { grid-area: action; }
+
+.product .image img { max-width: 100%; }
+.product .title { margin: 0; }
+
 .button {
   text-align: center;
   display: block;
@@ -139,6 +165,10 @@ header .wrapper span {
   padding: 10px 12px;
   border-radius: 3px;
   border: 1px outset #ea9b27;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
 }
 .button:hover {
   color: inherit;
@@ -146,6 +176,13 @@ header .wrapper span {
 ul.sections {
   max-width:400px;
   float:right;
+  background: lightcyan;
+  padding: 10px 10px 10px 30px;
+  margin: 0 0 10px 10px;
+  border: 1px dashed gray;
+}
+ul.sections li.depth-1 {
+  color: darkgray;
 }
 
 @media only screen and (max-width: 415px) {

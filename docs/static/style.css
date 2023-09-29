@@ -42,6 +42,13 @@ h1 {
   font-size: 1.4em;
   line-height: 1.4em;
 }
+footer {
+  background-image: url(/coderlama.png);
+  background-position: bottom left;
+  background-position-y: 40px;
+  background-repeat: no-repeat;
+  background-size: 300px;
+}
 footer .wrapper {
   display: flex;
   justify-content: space-between;

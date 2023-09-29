@@ -10,53 +10,50 @@ pub_date:
 ---
 content:
 
-#### section-block ####
-depth: 2
-----
-header: Learning Materials
+#### h2-section-block ####
+header: Learning Materials for Software Developers
 ----
 body:
 
-Software developers are lifelong learners. They both like it, and forced by the software industry too.
+Software developers are lifelong learners. Most of them like it, the others are forced by the software industry.
 
-You can provide two things for their never ending learning processes. Books and Online Courses. (Online Free Tutorials are not subject of this article :)
+Learning materials for software developers can be a good choice to please them. If you prefer this way you have two options: Programming books and online courses.
 ----
-products: 
-#### section-block ####
-depth: 3
-----
-header: Programming Books
-----
+content:
+
+##### h3-section-block #####
+header: Books for Software Developers
+-----
 body:
 
 It's true that software development technologies are constantly evolving, and for books, it can be tough to keep up with latest trends.
 
 But, there are some timeless books, they are always valid and enlightening.
 
-The other good thing about buying these books are they are not technology dependent. So you don't need to run an investigation about the technologies t hat your developer is working on.
+So you can consider buying one of the software development books which I will recommend below. 
 
-I guarantee that if you buy one of these books for the software developer in your life, you will make the effect you want.
-----
-products: 
-#### section-block ####
-depth: 3
-----
-header: Online Courses
-----
-body:
+The other good thing about buying these books are they are not technology dependent. So you don't need to run an investigation about the technologies that your developer is working on.
+-----
+content:
 
-Some of people I know likes to learn by watching videos and online courses. If the software developer in your life is this kind. You can give a meaningful gift by buying them online courses. 
+###### product-block ######
+title: Clean Code: A Handbook of Agile Software Craftsmanship
+------
+description:
 
-Udemy is good place to start for this, I use their courses daily. 
-----
-products: 
-#### section-block ####
-depth: 2
-----
-header: Keyboards!
-----
-body: All the software developers without exception are fetishistic about the mechanical keyboards.
-----
-products: 
+Readers will come away from this book understanding:
+ - How to tell the difference between good and bad code
+ - How to write good code and how to transform bad code into good code
+ - How to create good names, good functions, good objects, and good classes
+ - How to format code for maximum readability
+ - How to implement complete error handling without obscuring code logic
+ - How to unit test and practice test-driven development
+ - What “smells” and heuristics can help you identify bad code
+------
+image: clean-code.jpeg
+------
+link: 
+------
+price: 19.99
 ---
 _discoverable: yes

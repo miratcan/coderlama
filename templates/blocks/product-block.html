@@ -1,7 +1,9 @@
 <div class="product">
-  <img src={{ this.image }} />
-  <div class="details">
-    <h4>{{ this.title }}</h4>
-    {{ this.body }}
+  <div class="image">
+    <img src="{{ this.image }}" />
   </div>
+  <h4 class="title">{{ this.title }}</h4>
+  <div class="desc">{{ this.description }}</div>
+  <span class="price">{{ this.price }}$</span>
+  <a class="action button">Check It Out</a>
 </div>

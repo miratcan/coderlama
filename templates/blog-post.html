@@ -1,15 +1,8 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }} | My Blog{% endblock %}
+{% block wrapper_classes %}narrow{% endblock %}
 {% block body %}
 <article class="blog-post">
-  <ul class='sections'>
-    <li><a href="#{{ this.title|slug }}">{{ this.title }}</a></li>
-    {% if 'content' in this %}
-      {% for block in this.content.blocks %}
-      <li style="padding-left: {{ block.depth * 2 }}px"><a href="#{{ block.header|slug }}">{{ block.header }}</a></li>
-      {% endfor %}
-    {% endif %}
-  </ul>
   <h1 id="{{ this.title|slug }}">{{ this.title }}</h1>
   <p class="meta">by {{ this.author }} on {{ this.pub_date|dateformat('short') }}</p>
   {{ this.introduction }}

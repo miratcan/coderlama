@@ -1,0 +1,7 @@
+<h{% block depth %}2{% endblock %} id="{{ this.header|slug }}">
+  {{ this.header}}
+</h{{ self.depth() }}>
+{{ this.body }}
+{% for blk in this.content.blocks %}
+  {{ blk }}
+{% endfor %}

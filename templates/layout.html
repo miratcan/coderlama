@@ -6,20 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}Welcome{% endblock %} — CoderLama</title>
 <body>
-   
   <header>
-    <div class="wrapper">
+    <div class="wrapper narrow">
       <a class='brand' href='/'>CoderLama</a>
       <span>Physical and digital products for software developers.</span>
     </div>
   </header>
-  <div class="page {% block page_classes %}{% endblock %}">
-    <div class="wrapper">
+  <div class="page">
+    <div class="wrapper {% block wrapper_classes %}{% endblock %}">
       {% block body %}{% endblock %}
     </div>
   </div>
   <footer>
-    <div class="wrapper">
+    <div class="wrapper narrow">
       <ul>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/about/privacy-policy/">Privacy Policy</a></li>

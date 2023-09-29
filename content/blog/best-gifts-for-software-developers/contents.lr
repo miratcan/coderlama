@@ -11,7 +11,7 @@ pub_date:
 content:
 
 #### section-block ####
-depth: h2
+depth: 2
 ----
 header: Learning Materials
 ----
@@ -23,7 +23,7 @@ You can provide two things for their never ending learning processes. Books and 
 ----
 products: 
 #### section-block ####
-depth: h3
+depth: 3
 ----
 header: Programming Books
 ----
@@ -39,7 +39,7 @@ I guarantee that if you buy one of these books for the software developer in you
 ----
 products: 
 #### section-block ####
-depth: h3
+depth: 3
 ----
 header: Online Courses
 ----
@@ -51,7 +51,7 @@ Udemy is good place to start for this, I use their courses daily.
 ----
 products: 
 #### section-block ####
-depth: h2
+depth: 2
 ----
 header: Keyboards!
 ----

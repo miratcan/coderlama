@@ -59,7 +59,7 @@ nav ul li {
 .page {
   flex-grow: 1;
 }
-.page.narrow .wrapper{
+.wrapper.narrow {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -92,7 +92,7 @@ header .wrapper span {
 #products {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));assets
   grid-auto-rows: 200px;
 
 }
@@ -146,6 +146,13 @@ header .wrapper span {
 ul.sections {
   max-width:400px;
   float:right;
+  background: lightcyan;
+  padding: 10px 10px 10px 30px;
+  margin: 0 0 10px 10px;
+  border: 1px dashed gray;
+}
+ul.sections li.depth-1 {
+  color: darkgray;
 }
 
 @media only screen and (max-width: 415px) {

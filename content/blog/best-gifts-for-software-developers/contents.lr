@@ -55,5 +55,29 @@ image: clean-code.jpeg
 link: 
 ------
 price: 19.99
+###### product-block ######
+title: The Pragmatic Programmer: Your Journey to Mastery
+------
+description:
+
+The Pragmatic Programmer is one of those rare tech books you’ll read, re-read, and read again over the years. Whether you’re new to the field or an experienced practitioner, you’ll come away with fresh insights each and every time.
+
+Dave Thomas and Andy Hunt wrote the first edition of this influential book in 1999 to help their clients create better software and rediscover the joy of coding. These lessons have helped a generation of programmers examine the very essence of software development, independent of any particular language, framework, or methodology, and the Pragmatic philosophy has spawned hundreds of books, screencasts, and audio books, as well as thousands of careers and success stories.
+------
+image: pragmatic-programmer.jpg
+------
+link: https://www.amazon.com/dp/0135957052
+------
+price: 39.49
+###### product-block ######
+title: Design Patterns: Elements of Reusable Object-Oriented Software
+------
+description: Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.
+------
+image: design-patterns.jpeg
+------
+link: https://www.amazon.com/dp/0201633612/
+------
+price: 16.00
 ---
 _discoverable: yes

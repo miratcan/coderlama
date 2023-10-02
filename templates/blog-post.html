@@ -4,13 +4,21 @@
 {% block body %}
 <article class="blog-post">
   <h1 id="{{ this.title|slug }}">{{ this.title }}</h1>
+  {% if 'content' in this %}
+    <ul class="sections">
+      <li class="l1"><a href="#{{ this.title|slug }}">{{ this.title }}</a></li>
+      {% for _block in this.content.blocks %}
+      <li class="l{{ _block.header_depth }}"><a href="#{{ _block.header|slug }}">{{ _block.header }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
   <p class="meta">by {{ this.author }} on {{ this.pub_date|dateformat('short') }}</p>
   {{ this.introduction }}
   <div class="body">
     {% if 'content' in this %}
-    {% for block in this.content.blocks %}
-      {{ block }}
-    {% endfor %}
+      {% for _block in this.content.blocks %}
+        {{ _block }}
+      {% endfor %}
     {% endif %}
   </div>
 </article>

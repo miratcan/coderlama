@@ -1,0 +1,7 @@
+{% macro format_price(price) %}
+  {% if price %}
+    {{ "$%.2f"|format(price) }}
+  {% else %}
+    No Price Data
+  {% endif %}
+{% endmacro %}

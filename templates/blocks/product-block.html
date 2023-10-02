@@ -1,9 +1,11 @@
+{% from "macros/link-button.html" import render_link_button %}
+{% from "macros/format-price.html" import format_price %}
 <div class="product">
   <div class="image">
     <img src="{{ this.image }}" />
   </div>
   <h4 class="title">{{ this.title }}</h4>
   <div class="desc">{{ this.description }}</div>
-  <span class="price">{{ this.price }}$</span>
-  <a class="action button" rel="nofollow" target="_blank" href="{{ this.link }}?tag=coderlam-20">Check It Out</a>
+  <span class="price">{{ format_price(this.price) }}$</span>
+  {{ render_link_button (this.link, 'amazon') }}
 </div>

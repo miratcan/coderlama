@@ -19,20 +19,30 @@
   </div>
   <footer>
     <div class="wrapper narrow">
-      <ul>
-        <li><a href="/about/">About Us</a></li>
-        <li><a href="/about/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/about/terms-of-use/">Terms of Use</a></li>
-      </ul>
-      <ul>
-        {% for category in site.query('/products') %} 
-        <li><a href="{{ category.path }}/">{{ category.name }}</a></li>
-        {% endfor %}
-      </ul>
-      <ul>
-        <li><a>Twitter</a></li>
-        <li><a>Instagram</a></li>
-      </ul>
+      <div>
+        <h4>Coderlama</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/about/terms-of-use/">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          {% for category in site.query('/products') %} 
+          <li><a href="{{ category.path }}/">{{ category.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="https://twitter.com/coderlama"><img src="{{ '/static/twitter.png'|url}}"></a>
+        <!--
+        <a><img src="{{ '/static/instagram.png'|url}}"></a>
+        <a><img src="{{ '/static/tumblr.png'|url}}"></a>
+        !-->
+      </div>
     </div>
     {% include "components/masonry-script.html" %}
   </footer>

@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 body {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'PT Serif', serif;
     margin: 0; padding: 0;
     background: url(bg.png) top left repeat-x;
     display: flex;
@@ -17,7 +22,15 @@ a:hover {
 }
 h1, h2, h3, h4, h5 {
   margin-top: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
 }
+
+h1 { font-size: 28px; line-height: 32px; text-align: center; }
+h2 { font-size: 26px; line-height: 30px;}
+h3 { font-size: 24px; line-height: 28px;}
+h4 { font-size: 22px; line-height: 26px;}
+h5 { font-size: 20px; line-height: 24px;}
 header, footer, div.page {
   padding: 20px 30px;
 }
@@ -38,10 +51,6 @@ header, footer{
   margin-top: 0;
 }
 
-h1 {
-  font-size: 1.4em;
-  line-height: 1.4em;
-}
 footer {
   background-image: url(/coderlama.png);
   background-position: bottom left;
@@ -52,6 +61,16 @@ footer {
 footer .wrapper {
   display: flex;
   justify-content: space-between;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  margin: 0 0 5px 0;
+}
+footer ul li img {
+  height: 100%;
 }
 nav ul {
   list-style: none;
@@ -99,18 +118,13 @@ header .wrapper span {
 #products {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));assets
-  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
 
-}
-
-.product-item {
 }
 
 .product-item h2 {
-  color: #606060;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 24px;
   margin: 0 0 5px 0;
 }
 .product-item img {
@@ -118,16 +132,16 @@ header .wrapper span {
 }
 .product-item p {
   margin: 0;
-  font-size: 12px;
-  line-height: 17px;
-  color: #333;
+  color: dimgray;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 #product { 
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: auto auto auto 100%;
-  grid-column-gap: 10px;
+  grid-column-gap: 40px;
 }
 #product > * { margin: 0 0 10px 0;}
 #product #title       { grid-area: 1 / 2 / 2 / 3; } 
@@ -142,8 +156,7 @@ header .wrapper span {
 .product {
   padding: 10px;
   margin: 0 0 20px 0;
-  background: lightgrey;
-  border: 1px dashed gray;
+  background: #fff;
   display: grid;
   grid-template-columns: minmax(100px, 300px) 1fr 1fr;
   grid-template-rows: auto 1fr auto;
@@ -187,10 +200,13 @@ ul.sections {
   padding: 10px 10px 10px 30px;
   margin: 0 0 10px 10px;
   border: 1px dashed gray;
+  list-style: circle;
 }
-ul.sections li.depth-1 {
-  color: darkgray;
-}
+ul.sections li.l1 { list-style: disc; }
+ul.sections li.l2 { margin-left: .5em; }
+ul.sections li.l3 { margin-left: 1em; }
+ul.sections li.l4 { margin-left: 1.5em; }
+ul.sections li.l5 { margin-left: 2em; }
 
 @media only screen and (max-width: 415px) {
   header .wrapper {

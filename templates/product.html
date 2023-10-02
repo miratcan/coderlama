@@ -1,19 +1,18 @@
+{% from "macros/link-button.html" import render_link_button %}
+{% from "macros/format-price.html" import format_price %}
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block wrapper_classes %}narrow{% endblock %}
 {% block body %}
-<article id="product">
-  <div id="images">
-    {% for attachment in this.attachments %}
-    <img alt="{{ this.title }}" src="{{attachment.path}}" />
-    {% endfor %}
-  </div>
-  <h1 id="title">{{ this.title }}</h1>
-  <p id="description">{{ this.description }}</p>
-  <p id="price">{{ this.price }}$</p>
-  <p id="link">
-    <a class="button" rel="nofollow" target="_blank" href="{{ this.link }}?tag=coderlam-20">Check It Out</a>
-  </p>
-</div>
-</article>
+  <article id="product">
+    <div id="images">
+      {% for attachment in this.attachments %}
+        <img alt="{{ this.title }}" src="{{attachment.path}}" />
+      {% endfor %}
+    </div>
+    <h1 id="title">{{ this.title }}</h1>
+    <p id="description">{{ this.description }}</p>
+    <p id="price">{{ format_price(this.price) }}</p>
+    <p id="link">{{ render_link_button(this.link, 'amazon') }}</p>
+  </article>
 {% endblock %}

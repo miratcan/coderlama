@@ -1,0 +1,4 @@
+{% macro render_link_button(url, affiliate) %}
+  <a class="button" rel="nofollow" target="_blank" href="{{ url }}{{ bag('affiliates', affiliate, 'tag') }}">Check It Out</a>
+{% endmacro %}
+

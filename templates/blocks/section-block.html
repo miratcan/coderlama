@@ -1,0 +1,3 @@
+<h{{ this.header_depth }} id="{{ this.header|slug }}">{{ this.header}}</h{{ this.header_depth }}>
+{{ this.body }}{% for _block in this.products.blocks %}{{ _block }}
+{% endfor %}

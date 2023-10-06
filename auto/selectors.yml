@@ -1,0 +1,17 @@
+name:
+    css: '#productTitle'
+    xpath: null
+    type: Text
+short_description:
+    css: '#featurebullets_feature_div'
+    xpath: null
+    type: Text
+images:
+    css: '.imgTagWrapper img'
+    xpath: null
+    type: Attribute
+    attribute: data-a-dynamic-image
+price:
+    css: 'div.centerColAlign span.a-price > span:nth-of-type(2)'
+    xpath: null
+    type: Text

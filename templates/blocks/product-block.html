@@ -5,7 +5,9 @@
     <img src="{{ this.image }}" />
   </div>
   <h4 class="title">{{ this.title }}</h4>
-  <div class="desc">{{ this.description }}</div>
-  <span class="price">{{ format_price(this.price) }}$</span>
-  {{ render_link_button (this.link, 'amazon') }}
+    <div class="desc">{{ this.description }}</div>
+  <div class='footer'> 
+    <span class="price">{{ format_price(this.price) }}$</span>
+    {{ render_link_button (this.link, 'amazon') }}
+  </div>
 </div>

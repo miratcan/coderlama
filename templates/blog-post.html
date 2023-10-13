@@ -12,7 +12,6 @@
       {% endfor %}
     </ul>
   {% endif %}
-  <p class="meta">by {{ this.author }} on {{ this.pub_date|dateformat('short') }}</p>
   {{ this.introduction }}
   <div class="body">
     {% if 'content' in this %}

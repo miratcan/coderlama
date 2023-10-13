@@ -82,5 +82,58 @@ image: design-patterns.jpeg
 link: https://www.amazon.com/dp/0201633612/
 -----
 price: 16.0
+#### section-block ####
+header_depth: 2
+----
+header: Health Products
+----
+body: I see a lot of ads from programming courses on Youtube, they behave like when you become a programmer you save yourself from every problem on your life. But it's not. Most of the software developers struggle with back pain, neck pain  and carpal tunnel syndrome. So I'll recommend two products for them:
+----
+products:
+
+##### product-block #####
+title: Brace Master 2 Pairs Arthritis Compression Gloves for Women and Men
+-----
+description:
+
+ - It does not have fingers so you can continue your daily work without any problem.
+ - It has stickable elastic wraps that protects your joints.
+ - On palm side it has anti slip glue, which can enchance your friction in daily work.
+ - It's fabric is soft and breathable.
+ - It's easy to clean.
+-----
+image: brace-master.jpeg
+-----
+link: 
+-----
+price: 15.99
+##### product-block #####
+title: Breo Back Neck Massager with Heat
+-----
+description:
+
+ - Uses shiatsu kneading massage and heating to relieve pain and relax the muscles.
+ - It can be used on neck, shoulder, upper back, lower back, spine and waist.
+ - Simple one button control, every click changes mode.
+-----
+image: neck-massager.jpeg
+-----
+link: https://www.amazon.com/dp/B0C49K6JTX/
+-----
+price: 29.99
+##### product-block #####
+title: NNUIBY Back Stretcher for Lower Back Pain Relief
+-----
+description:
+
+ - 10 magnetic acupuncture points and 98 massage points, which bring acupuncture effects.
+ - Three adjustable heights for use, which is suitable for people of different ages.
+ - Can withstand up to 300 lbs and is not easy to deform or break
+-----
+image: back-stretcher.jpeg
+-----
+link: https://www.amazon.com/dp/B0CC8M95PY/
+-----
+price: 28.99
 ---
 _discoverable: yes

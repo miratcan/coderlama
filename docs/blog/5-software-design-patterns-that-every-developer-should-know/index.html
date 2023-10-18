@@ -1,0 +1,199 @@
+
+
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../static/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Software Design Patterns That Every Developer Should Know | My Blog — CoderLama</title>
+<body>
+  <header>
+    <div class="wrapper narrow" style='display: flex;'>
+      <a class='brand' href='/'>CoderLama</a>
+      <span style='flex-grow: 1'>Physical and digital products for software developers.</span>
+      <a href='/blog/'>Blog</a>
+    </div>
+  </header>
+  <div class="page">
+    <div class="wrapper narrow">
+      
+<article class="blog-post">
+  <h1 id="5-software-design-patterns-that-every-developer-should-know">5 Software Design Patterns That Every Developer Should Know</h1>
+  
+    <ul class="sections">
+      <li class="l1"><a href="#5-software-design-patterns-that-every-developer-should-know">5 Software Design Patterns That Every Developer Should Know</a></li>
+      
+      <li class="l2"><a href="#1-singleton-pattern">1. Singleton Pattern</a></li>
+      
+      <li class="l2"><a href="#2-factory-method-pattern">2. Factory Method Pattern</a></li>
+      
+      <li class="l2"><a href="#3-observer-pattern">3. Observer Pattern</a></li>
+      
+      <li class="l2"><a href="#4-decorator-pattern">4. Decorator Pattern</a></li>
+      
+      <li class="l2"><a href="#5-strategy-pattern">5. Strategy Pattern</a></li>
+      
+    </ul>
+  
+  <p>Software design patterns are reusable solutions to common problems that software developers encounter during the design and development of applications. They provide a structured and time-tested approach to solving issues related to software architecture and code organization. Mastering these design patterns can significantly improve your ability to create robust, maintainable, and scalable software. In this article, we'll explore five essential software design patterns that every developer should be familiar with.</p>
+
+  <div class="body">
+    
+      
+        <h2 id="1-singleton-pattern">1. Singleton Pattern</h2>
+<p>The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance. It is particularly useful when you need a single point of control for resources, such as a database connection pool or a configuration manager.</p>
+<p>By using a Singleton, you can prevent multiple instances from being created, manage shared resources efficiently, and ensure that global state remains consistent throughout your application.</p>
+<pre><code class="lang-python">class Singleton:
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(Singleton, cls).__new__(cls)
+        return cls._instance
+</code></pre>
+
+      
+        <h2 id="2-factory-method-pattern">2. Factory Method Pattern</h2>
+<p>The Factory Method pattern is a creational design pattern that provides an interface for creating objects but allows subclasses to alter the type of objects that will be created. This pattern promotes loose coupling by allowing the client code to work with abstract types rather than concrete implementations.</p>
+<p>Factory methods are commonly used in libraries and frameworks where the exact type of object is unknown to the client code at compile time.</p>
+<pre><code class="lang-python">class Creator:
+    def factory_method(self):
+        raise NotImplementedError()
+
+    def create(self):
+        product = self.factory_method()
+        return product
+</code></pre>
+
+      
+        <h2 id="3-observer-pattern">3. Observer Pattern</h2>
+<p>The Observer pattern is a behavioral design pattern that defines a one-to-many relationship between objects. When the state of one object changes, all its dependents are notified and updated automatically. This pattern is widely used in event handling systems and implementing publish-subscribe architectures.</p>
+<p>By using the Observer pattern, you can decouple the subject (the object being observed) from its observers, making your code more extensible and maintainable.</p>
+<pre><code class="lang-python">class Subject:
+    def __init__(self):
+        self._observers = []
+
+    def attach(self, observer):
+        self._observers.append(observer)
+
+    def detach(self, observer):
+        self._observers.remove(observer)
+
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
+</code></pre>
+
+      
+        <h2 id="4-decorator-pattern">4. Decorator Pattern</h2>
+<p>The Decorator pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. It is a flexible alternative to subclassing for extending functionality.</p>
+<p>By using decorators, you can add responsibilities to objects in a modular and composable way, making it easy to customize objects with new features.</p>
+<pre><code class="lang-python">class Coffee:
+    def cost(self):
+        return 5
+
+class MilkDecorator:
+    def __init__(self, coffee):
+        self._coffee = coffee
+
+    def cost(self):
+        return self._coffee.cost() + 2
+</code></pre>
+
+      
+        <h2 id="5-strategy-pattern">5. Strategy Pattern</h2>
+<p>The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows you to select the algorithm to use at runtime, making your code more flexible and promoting code reusability.</p>
+<p>This pattern is particularly useful when you have multiple algorithms or behaviors that can be applied to a class, and you want to avoid a proliferation of conditional statements.</p>
+<pre><code class="lang-python">class Context:
+    def __init__(self, strategy):
+        self._strategy = strategy
+
+    def execute_strategy(self):
+        return self._strategy.execute()
+
+class ConcreteStrategyA:
+    def execute(self):
+        return &quot;Strategy A&quot;
+
+class ConcreteStrategyB:
+    def execute(self):
+        return &quot;Strategy B&quot;
+</code></pre>
+
+      
+    
+  </div>
+  <p>In conclusion, software design patterns are essential tools in a developer's toolkit. They provide well-established solutions to common problems, improve code maintainability, and make your software more adaptable to changing requirements. By mastering these five fundamental design patterns, you'll be better equipped to design and implement effective, scalable, and maintainable software.</p>
+
+</article>
+
+    </div>
+  </div>
+  <footer>
+    <div class="wrapper narrow">
+      <div>
+        <h4>Coderlama</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/about/terms-of-use/">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+           
+          <li><a href="/products/tshirts/">Tshirts</a></li>
+           
+          <li><a href="/products/pomodoro-timers/">Pomodoro Timers</a></li>
+           
+          <li><a href="/products/accessories/">Accessories</a></li>
+           
+          <li><a href="/products/tools/">Tools</a></li>
+           
+          <li><a href="/products/posters/">Posters</a></li>
+           
+          <li><a href="/products/keyboards/">Keyboards</a></li>
+           
+          <li><a href="/products/laptops/">Laptops</a></li>
+           
+          <li><a href="/products/books/">Books</a></li>
+           
+          <li><a href="/products/laptop-stands/">Laptop Stands</a></li>
+           
+          <li><a href="/products/equipment/">Equipment</a></li>
+           
+          <li><a href="/products/earphones/">Earphones</a></li>
+          
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="https://twitter.com/coderlama"><img src="../../static/twitter.png"></a>
+        <!--
+        <a><img src="../../static/instagram.png"></a>
+        <a><img src="../../static/tumblr.png"></a>
+        !-->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+<script>
+  const grid = document.getElementsByClassName("products")[0];
+  var macy = Macy({
+      container: '#products',
+      trueOrder: false,
+      waitForImages: false,
+      margin: 40,
+      columns: 6,
+      breakAt: {
+          1024: 4,
+          800: 3,
+          520: 2,
+          400: 1
+      }
+  });
+</script>
+
+  </footer>
+  <a id="follow-on-twitter" href="https://twitter.com/intent/follow?screen_name=coderlama">Follow on Twitter</a>
+
+  </body>

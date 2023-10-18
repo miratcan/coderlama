@@ -1,0 +1,137 @@
+title: 5 Software Design Patterns That Every Developer Should Know
+---
+content:
+
+#### section-block ####
+header_depth: 2
+----
+header: 1. Singleton Pattern
+----
+body:
+
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance. It is particularly useful when you need a single point of control for resources, such as a database connection pool or a configuration manager.
+
+By using a Singleton, you can prevent multiple instances from being created, manage shared resources efficiently, and ensure that global state remains consistent throughout your application.
+
+```python
+class Singleton:
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(Singleton, cls).__new__(cls)
+        return cls._instance
+```
+----
+products: 
+#### section-block ####
+header_depth: 2
+----
+header: 2. Factory Method Pattern
+----
+body:
+
+The Factory Method pattern is a creational design pattern that provides an interface for creating objects but allows subclasses to alter the type of objects that will be created. This pattern promotes loose coupling by allowing the client code to work with abstract types rather than concrete implementations.
+
+Factory methods are commonly used in libraries and frameworks where the exact type of object is unknown to the client code at compile time.
+
+```python
+class Creator:
+    def factory_method(self):
+        raise NotImplementedError()
+
+    def create(self):
+        product = self.factory_method()
+        return product
+```
+----
+products: 
+#### section-block ####
+header_depth: 2
+----
+header: 3. Observer Pattern
+----
+body:
+
+The Observer pattern is a behavioral design pattern that defines a one-to-many relationship between objects. When the state of one object changes, all its dependents are notified and updated automatically. This pattern is widely used in event handling systems and implementing publish-subscribe architectures.
+
+By using the Observer pattern, you can decouple the subject (the object being observed) from its observers, making your code more extensible and maintainable.
+
+```python
+class Subject:
+    def __init__(self):
+        self._observers = []
+
+    def attach(self, observer):
+        self._observers.append(observer)
+
+    def detach(self, observer):
+        self._observers.remove(observer)
+
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
+```
+----
+products: 
+#### section-block ####
+header_depth: 2
+----
+header: 4. Decorator Pattern
+----
+body:
+
+The Decorator pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. It is a flexible alternative to subclassing for extending functionality.
+
+By using decorators, you can add responsibilities to objects in a modular and composable way, making it easy to customize objects with new features.
+
+```python
+class Coffee:
+    def cost(self):
+        return 5
+
+class MilkDecorator:
+    def __init__(self, coffee):
+        self._coffee = coffee
+
+    def cost(self):
+        return self._coffee.cost() + 2
+```
+----
+products: 
+#### section-block ####
+header_depth: 2
+----
+header: 5. Strategy Pattern
+----
+body:
+
+The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows you to select the algorithm to use at runtime, making your code more flexible and promoting code reusability.
+
+This pattern is particularly useful when you have multiple algorithms or behaviors that can be applied to a class, and you want to avoid a proliferation of conditional statements.
+
+```python
+class Context:
+    def __init__(self, strategy):
+        self._strategy = strategy
+
+    def execute_strategy(self):
+        return self._strategy.execute()
+
+class ConcreteStrategyA:
+    def execute(self):
+        return "Strategy A"
+
+class ConcreteStrategyB:
+    def execute(self):
+        return "Strategy B"
+```
+----
+products: 
+---
+introduction:
+
+Software design patterns are reusable solutions to common problems that software developers encounter during the design and development of applications. They provide a structured and time-tested approach to solving issues related to software architecture and code organization. Mastering these design patterns can significantly improve your ability to create robust, maintainable, and scalable software. In this article, we'll explore five essential software design patterns that every developer should be familiar with.
+
+---
+conclusion: In conclusion, software design patterns are essential tools in a developer's toolkit. They provide well-established solutions to common problems, improve code maintainability, and make your software more adaptable to changing requirements. By mastering these five fundamental design patterns, you'll be better equipped to design and implement effective, scalable, and maintainable software.

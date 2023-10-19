@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }} | My Blog{% endblock %}
+{% block extra_head %}
+  {% if this.has_code %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+  {% endif %}
+{% endblock %}
 {% block wrapper_classes %}narrow{% endblock %}
 {% block body %}
 <article class="blog-post">
@@ -22,5 +29,7 @@
   </div>
   {{ this.conclusion }}
 </article>
+{% if this.has_code %}<script>hljs.highlightAll();</script>{% endif %}
 {% endblock %}
+
 

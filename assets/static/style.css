@@ -212,6 +212,7 @@ ul.sections li.l3 { margin-left: 1em; }
 ul.sections li.l4 { margin-left: 1.5em; }
 ul.sections li.l5 { margin-left: 2em; }
 
+code, pre{ border-radius:10px; }
 @media only screen and (max-width: 560px) {
   header .wrapper {
     flex-direction: column;
@@ -236,6 +237,7 @@ ul.sections li.l5 { margin-left: 2em; }
   header, footer, div.page {
     padding: 10px;
   }
+
   .product {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto);

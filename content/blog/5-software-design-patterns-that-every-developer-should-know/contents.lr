@@ -135,3 +135,5 @@ Software design patterns are reusable solutions to common problems that software
 
 ---
 conclusion: In conclusion, software design patterns are essential tools in a developer's toolkit. They provide well-established solutions to common problems, improve code maintainability, and make your software more adaptable to changing requirements. By mastering these five fundamental design patterns, you'll be better equipped to design and implement effective, scalable, and maintainable software.
+---
+has_code: yes

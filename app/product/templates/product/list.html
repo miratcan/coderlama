@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% load thumbnail %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block body %}
+<div id="products" class="wrapper narrow">
+    {% for product in products %}
+        <div class="product-item">
+            <h2><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h2>
+            <div class="content">
+                {% thumbnail product.image_1 "300x250" crop="center" as im %}
+                    <img src="{{ im.url }}">
+                {% endthumbnail %}
+            </div>
+                {% if product.sdesc %}<p>{{ product.sdesc }}</p>{% endif %}
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}

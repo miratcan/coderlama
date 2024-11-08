@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ product.title }}{% endblock %}
+{% block wrapper_classes %}narrow{% endblock %}
+{% block body %}
+  <article id="product">
+    <div id="images">
+        <img alt="{{ product.name }}" src="{{product.image_1.url }}" />
+        {% if product.image_2 %}<img alt="{{ product.name }}" src="{{product.image_2.url }}" /> {% endif %}
+        {% if product.image_3 %}<img alt="{{ product.name }}" src="{{product.image_3.url }}" /> {% endif %}
+    </div>
+    <h1 id="title">{{ product.name }}</h1>
+    <p id="description">{{ product.sdesc }}</p>
+    <p id="price">{% include "widgets/price.html" %}</p>
+    <p id="link">{% include "widgets/buy.html" %}</p>
+  </article>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% load static %}{% include "widgets/navigation.html" %}
+
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{% static '/style.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Welcome{% endblock %} — CoderLama</title>
+{% block extra_head %}{% endblock %}
+<body>
+  <header>
+    <div class="wrapper narrow" style="display: flex;">
+      <a class="brand" href="/">CoderLama</a>
+      <span style="flex-grow: 1">Physical and digital products for software developers.</span>
+      <a href="/blog/">Blog</a>
+    </div>
+  </header>
+  <div class="page">
+    {% include "widgets/navigation.html" %}
+    <div class="wrapper {% block wrapper_classes %}{% endblock %}">
+      {% block body %}{% endblock %}
+    </div>
+  </div>
+  <footer>
+    <div class="wrapper narrow">
+      <div>
+        <h4>Coderlama</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/about/terms-of-use/">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          {% comment %}
+          {% for category in site.query('/products') %} 
+          <li><a href="{{ category.path }}/">{{ category.name }}</a></li>
+          {% endfor %}
+          {% endcomment %}
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        {% comment %}
+        <a href="https://twitter.com/coderlama"><img src="{% static '/static/twitter.png' }}"></a>
+        <a><img src="{{ '/static/instagram.png'|url}}"></a>
+        <a><img src="{{ '/static/tumblr.png'|url}}"></a>
+        {% endcomment %}
+      </div>
+    </div>
+  </footer>
+  <a id="follow-on-twitter" href="https://twitter.com/intent/follow?screen_name=coderlama">Follow on Twitter</a>
+
+  </body>
